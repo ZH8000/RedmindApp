@@ -29,6 +29,11 @@ public class MainActivity extends CordovaActivity
     {
         super.onCreate(savedInstanceState);
         // Set by <content src="index.html" /> in config.xml
-        loadUrl(launchUrl);
+//        loadUrl(launchUrl);
+        setContentView(R.layout.main);
+
+        CordovaWebView cwv = (CordovaWebView) findViewById(R.id.webView);
+        Config.init(this);
+        cwv.loadUrl("http://zhenhai.no-ip.org");
     }
 }
